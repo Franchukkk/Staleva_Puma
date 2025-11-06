@@ -1,0 +1,127 @@
+.site-header {
+	position: absolute;
+	background-color: transparent;
+	padding: 7px 100px;
+	z-index: 9999;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.site-header-container {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site-logo img {
+	max-height: 90px;
+	width: auto;
+	display: block;
+	transition: max-height 0.3s ease;
+}
+
+.header-navigation {
+	display: flex;
+	gap: 30px;
+}
+
+.btn {
+	padding: 18px 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+
+	font-family: 'Bebas Neue Cyrillic', sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+
+	line-height: 100%;
+	letter-spacing: 0%;
+	white-space: nowrap;
+}
+
+.btn-outline {
+	border-color: #5acafa;
+	color: #5acafa;
+}
+.btn-outline:hover {
+	background-color: #5acafa;
+	color: #ffffff;
+}
+
+.btn-solid {
+	background-color: #5acafa;
+	border-color: #5acafa;
+	color: #000000;
+}
+.btn-solid:hover {
+	background-color: transparent;
+	border-color: #5acafa;
+	color: #5acafa;
+}
+
+@media (max-width: 1200px) {
+	.site-header {
+		padding: 7px 50px;
+	}
+
+	.site-logo img {
+		max-height: 70px;
+	}
+
+	.header-navigation {
+		gap: 20px;
+	}
+
+	.btn {
+		font-size: 24px;
+		padding: 14px 35px;
+	}
+}
+
+@media (max-width: 768px) {
+	.site-header {
+		padding: 5px 20px;
+	}
+
+	.site-logo img {
+		max-height: 55px;
+	}
+
+	.header-navigation {
+		gap: 10px;
+	}
+
+	.btn {
+		font-size: 18px;
+		padding: 10px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.site-header {
+		padding: 5px 10px;
+	}
+
+	.site-logo img {
+		max-height: 40px;
+	}
+
+	.header-navigation {
+		gap: 8px;
+
+		flex-shrink: 0;
+	}
+
+	.btn {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+
+	.btn-outline {
+		display: none;
+	}
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap');
+
+@font-face {
+	font-family: 'Bebas Neue Cyrillic';
+	src: url('fonts/bebas-neue-cyrillic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+	background-color: #373637;
+	font-family: 'Bebas Neue Cyrillic', 'Bebas Neue', 'Manrope', sans-serif;
+}
