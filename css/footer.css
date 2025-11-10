@@ -1,39 +1,41 @@
 .site-footer {
 	background-color: #121212;
-
 	padding: 40px 0 30px 0;
+	font-family: 'Bebas Neue Cyrillic', sans-serif;
+}
+
+.footer-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .footer-main {
 	display: flex;
 	align-items: center;
-
 	justify-content: center;
-
 	gap: 40px;
 }
 
 .footer-widget {
 	flex: none;
-
 	text-align: left;
 }
 
 .footer-phone a {
 	color: #ffffff;
 	text-decoration: none;
-	font-size: 16px;
-	font-weight: bold;
-
-	font-family: 'Manrope', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	white-space: nowrap;
 }
 .footer-phone a:hover {
-	color: #00aaff;
+	color: #5acafa;
 }
 
 .footer-social img {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	opacity: 0.7;
 	transition: opacity 0.3s ease;
 }
@@ -42,17 +44,16 @@
 }
 
 .footer-logo img {
-	max-height: 170px;
+	max-height: 140px;
 	width: auto;
 }
 
 .footer-address p {
 	color: #ffffff;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 1.6;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.4;
 	margin: 0;
-	font-family: 'Manrope', sans-serif;
 }
 
 .footer-copyright {
@@ -63,42 +64,69 @@
 	margin: 0;
 	font-size: 14px;
 	color: #ffffff66;
-	font-family: 'Manrope', sans-serif;
 }
 .footer-copyright a {
 	color: #ffffff66;
 	text-decoration: none;
 }
 .footer-copyright a:hover {
-	color: #00aaff;
+	color: #5acafa;
 }
+
 .footer-address {
 	text-align: left;
 }
 .footer-logo {
 	flex: none;
 	text-align: center;
+
+	margin: 0 20px;
 }
+
 @media (max-width: 992px) {
 	.footer-main {
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 20px;
+		gap: 30px;
 	}
 
 	.footer-widget {
-		flex: none;
-		flex-basis: 30%;
+		flex-basis: 45%;
 		margin-bottom: 20px;
 		text-align: center;
 	}
+
+	.footer-phone {
+		order: 2;
+	}
+	.footer-social {
+		order: 3;
+	}
+	.footer-address {
+		order: 4;
+	}
+
 	.footer-logo {
 		flex-basis: 100%;
 		order: -1;
+	}
+
+	.footer-address,
+	.footer-phone {
+		text-align: center;
 	}
 }
 @media (max-width: 768px) {
 	.footer-widget {
 		flex-basis: 100%;
+		margin-bottom: 15px;
+	}
+
+	.footer-logo {
+		margin: 0 0 20px 0;
+	}
+
+	.footer-main {
+		gap: 15px;
 	}
 }

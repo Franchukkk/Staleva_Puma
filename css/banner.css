@@ -2,10 +2,12 @@
 	position: relative;
 	overflow: hidden;
 	color: #ffffff;
-
 	padding-top: 150px;
-	padding-bottom: 0px;
+
 	box-sizing: border-box;
+	min-height: 90vh;
+	display: flex;
+	align-items: center;
 }
 
 .hero-background-img {
@@ -16,33 +18,36 @@
 	height: 100%;
 	object-fit: cover;
 	z-index: 1;
-
 	filter: brightness(40%);
 }
 
 .hero-container {
 	position: relative;
 	z-index: 2;
-
 	width: 100%;
 	max-width: 1500px;
 	margin: 0 auto;
-
 	display: flex;
-	align-items: center;
-	gap: 20px;
+	align-items: flex-end;
+	gap: 40px;
+	padding: 0 50px;
+	box-sizing: border-box;
 }
 
 .hero-image-col {
 	flex: 1;
+
+	flex-shrink: 0;
 }
 .hero-athlete-img {
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 .hero-content-col {
 	flex: 1;
+	padding-bottom: 20vh;
 }
 
 .hero-title {
@@ -50,43 +55,131 @@
 	margin-top: 0;
 	margin-bottom: 37px;
 	color: #ffffff;
-
-	font-family: Bebas Neue Cyrillic;
+	font-family: 'Bebas Neue Cyrillic', sans-serif;
 	font-weight: 400;
-	font-style: Regular;
 	font-size: 96px;
-
 	line-height: 100%;
 	letter-spacing: 0%;
 }
 
 .hero-description {
-	font-family: Bebas Neue;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
-	font-style: Regular;
 	font-size: 24px;
-
-	line-height: 100%;
+	line-height: 120%;
 	letter-spacing: 0%;
-
 	margin-bottom: 33px;
 	color: #ffffff;
+	max-width: 600px;
+}
+
+.hero-description br {
+	display: none;
 }
 
 .hero-buttons {
 	display: flex;
-	gap: px;
+	gap: 30px;
 }
 
-@media (max-width: 768px) {
+.btn {
+	padding: 18px 36px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	font-family: 'Bebas Neue Cyrillic', sans-serif;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 100%;
+	white-space: nowrap;
+}
+
+.btn-solid {
+	background-color: #5acafa;
+	border-color: #5acafa;
+	color: #000000;
+}
+.btn-solid:hover {
+	background-color: transparent;
+	border-color: #5acafa;
+	color: #5acafa;
+}
+
+.btn-outline {
+	border-color: #5acafa;
+	color: #5acafa;
+}
+.btn-outline:hover {
+	background-color: #5acafa;
+	color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+	.hero-title {
+		font-size: 72px;
+		margin-bottom: 25px;
+	}
+	.hero-description {
+		font-size: 20px;
+	}
+	.btn {
+		font-size: 24px;
+		padding: 14px 35px;
+	}
+}
+
+@media (max-width: 992px) {
+	.hero-banner {
+		padding-top: 100px;
+		padding-bottom: 50px;
+		min-height: auto;
+		align-items: center;
+	}
 	.hero-container {
 		flex-direction: column;
+		align-items: center;
+		padding: 0 20px;
 		text-align: center;
+		gap: 0;
 	}
+
+	.hero-content-col {
+		padding-bottom: 30px;
+	}
+
+	.hero-image-col {
+		display: none;
+	}
+
 	.hero-title {
-		font-size: 36px;
+		font-size: 54px;
 	}
+
+	.hero-description br {
+		display: block;
+	}
+
 	.hero-buttons {
 		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-title {
+		font-size: 42px;
+		margin-bottom: 20px;
+	}
+	.hero-description {
+		font-size: 18px;
+	}
+	.btn {
+		font-size: 20px;
+		padding: 12px 25px;
+	}
+	.hero-buttons {
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
 	}
 }
